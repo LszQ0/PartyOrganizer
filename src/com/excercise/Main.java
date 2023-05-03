@@ -9,7 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean shouldContinue = true;
 
-        PartyGuests partyGuests = new PartyGuests();
+        Party partyGuests = new Party();
 
 
         while (shouldContinue) {
@@ -20,7 +20,7 @@ public class Main {
             System.out.println("5. Find guest by phone number");
             System.out.println("6. Exit");
 
-            System.out.println("");
+            System.out.println();
             System.out.println("Choose number");
 
             int userChoice = scanner.nextInt();
@@ -28,7 +28,7 @@ public class Main {
             switch (userChoice) {
                 case 1 -> partyGuests.displayGuests();
                 case 2 -> partyGuests.addGuest();
-                case 3 -> partyGuests.removeGuest();
+                case 3 -> System.out.println("remove"); //partyGuests.removeGuest();
                 case 4 -> System.out.println("meals");
                 case 5 -> System.out.println("phone");
                 case 6 -> shouldContinue = false;
