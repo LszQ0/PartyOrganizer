@@ -53,7 +53,7 @@ public class Party {
 
         public void displayGuestByPhoneNumber() {
             System.out.println("Write phone number to look for the guest:");
-            Integer phoneNumber = Integer.valueOf(scanner.nextLine());
+            int phoneNumber = Integer.parseInt(scanner.nextLine());
             Guest guest = phoneToGuest.get(phoneNumber);
 
             guest.displayGuestInformation();
@@ -66,15 +66,21 @@ public class Party {
             }
         }
 
+        public void removeGuest() {
+            System.out.println("Which guest do you want to remove from the list?");
+            int guestNumber = Integer.parseInt(scanner.nextLine());
+            try{
+            guests.remove(guestNumber);
+            } catch (IndexOutOfBoundsException outOfBounds) {
+                System.out.println("Record haven't found. Try another number.");
+                System.out.println(outOfBounds.getMessage());
+            }
+    }
+
 
 }
 
 
-//    public void removeGuest() {
-//        System.out.println("Which guest do you want to remove from the list?");
-//        String removeName = scanner.nextLine();
-//        guests.remove(removeName);
-//    }
 
 //    public List<String> getGuests() {       // definiuje f-cje typu List: zwraca liste gości
 //        return guests;                      // rekordy będą pokazane, jeden obok drugiego

@@ -28,7 +28,7 @@ public class Main {
             switch (userChoice) {
                 case 1 -> party.displayGuests();
                 case 2 -> party.addGuest();
-                case 3 -> System.out.println("remove"); //party.removeGuest();
+                case 3 -> party.removeGuest();
                 case 4 -> party.displayMeals();
                 case 5 -> party.displayGuestByPhoneNumber();
                 case 6 -> shouldContinue = false;
